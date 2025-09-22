@@ -1,0 +1,2199 @@
+*{
+  box-sizing: 0;
+  margin: 0;
+  padding: 0;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+header {
+    height: 100px;
+    background:#720001ff;
+    display: flex;
+    padding: 0 40px;
+} 
+
+
+/* ====== NAV RESPONSIVE ====== */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #fff;
+    z-index: 1;
+}
+/*Header superior*/
+
+.header__superior{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.logo img{
+   width: 150px;
+}
+
+.search input{
+    width: 300px;
+    padding: 10px;
+}
+
+/*barra menu*/
+
+.container__menu{
+    width: 100%;
+    height: 70px;
+    background: #af312a; /* color para que combine */
+    padding: 0px 20px;
+}
+
+.menu{
+    max-width: 1200px;
+    margin: auto;
+    height: 100%;
+}
+
+nav{
+    height: 100%;
+}
+
+nav > ul{
+    height: 100%;
+    display: flex;
+}
+
+nav  ul  li{
+    height: 100%;
+    list-style: none;
+    position: relative;
+}
+
+nav > ul > li:first-child > a{
+   background-image: url(../img/home.png);
+   background-size: 24px;
+   background-repeat: no-repeat;
+   background-position:center center ;
+   padding: 20px 40px;
+}
+
+nav > ul > li:first-child:hover > a{
+   background-image: url(../img/home.png);
+   background-size: 24px;
+   background-repeat: no-repeat;
+   background-position:center center ;
+}
+
+nav > ul > li > a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 14px;
+    text-transform: uppercase; /*letra mayuscula*/
+    font-size: 14px;
+    color: white; 
+    transition:  all 300ms ease;
+}
+
+nav > ul > li > a:hover{
+    transform: scale(1.1);
+    background: rgb(223, 81, 105);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+}
+
+#selected{
+    transform: scale(1.1);
+    background-color: rgb(223, 81, 105);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+}
+
+/*submenu*/
+
+nav ul li ul {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    top: 90px;
+    left: -5px;
+    padding: 14px 0px;
+    visibility: hidden;
+    opacity: 0;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+    z-index: 10;
+    transition:  all 300ms ease;
+}
+
+nav ul li:hover ul{
+    visibility: visible;
+    opacity: 1;
+    top: 70px;
+}
+
+nav ul li ul::before{
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 12px solid white;
+    position: absolute;
+    top: -12px;
+    left: 20px;
+}
+
+nav ul li ul li a{
+    display: block;
+    color: black;
+    padding: 6px;
+    padding-left: 14px;
+    margin-top: 10px;
+    font-size: 14px;
+    text-transform: uppercase;
+    transition: all 300ms ease;
+}
+
+nav ul li ul li a:hover{
+    background:#af312a ;
+    color: #fff;
+    transform: scale(1.1);
+    padding-left: 30px;
+    font-size: 14px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+}
+
+/*Elementos responsivos*/
+.icon__menu{
+    font-size: 26px;
+    color: white;
+    cursor: pointer;
+    width: 26px;
+    height: 100%;
+    display: none;
+    align-items: center;
+}
+#label__check{
+    width: 26px;
+    height: 100%;
+    display: none;
+}
+
+#check__menu{
+    display: none;
+}
+@media screen and (max-width: 730px){
+
+    .search input{
+        display: none;
+    }
+
+    .header__superior{
+        padding: 10px;
+    }
+
+    .logo img{
+        width: 120px;
+
+    }
+
+    nav > ul {
+        flex-direction: column;
+        background-color: #af312a;
+        position: fixed;
+        left: 0;
+        top: 200px;
+        width: 100%;
+        height: 0px;
+        transition: all 300ms ease;
+        z-index: 100;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    nav > ul > li > a:hover{
+        transform: scale(1);
+    }
+
+    nav ul li ul{
+        left: 90px;
+    }
+
+    nav > ul > li:hover ul{
+        top: 50px;
+    }
+
+    nav > ul >li:first-child a{
+
+        background-position: 20px;
+    }
+
+    #selected{
+        transform: scale(1);
+    }
+
+    #label__check{
+        display: block;
+    }
+
+    .icon__menu{
+        display: flex;
+    }
+
+    #check__menu:checked ~ nav > ul{
+        height: 300px;
+        visibility: visible;
+        opacity: 1;
+        
+    }
+
+}
+
+
+
+
+
+.horario {
+    height: 330px;
+    background: rgb(39, 50, 114);
+    display: flex;
+}
+
+.sucursal {
+    padding: 80px;
+    align-items: end;
+    justify-content: end;
+    font-size: 1.25rem;
+}
+
+.imagen {
+    padding: 0 100px;
+}
+.lala {
+    height: 320px;
+}
+
+
+
+
+.carousel {
+    height: 100vh;
+    animation: animacion 2s;
+    position: relative;
+}
+
+@keyframes animation {
+    from{
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.carousel::before {
+    content: "";
+    background: rgba(0,0,0,.2);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.VideoSlide {
+    position: absolute;
+    object-fit: cover;
+    transition: all 1s linear;
+    width: 100%;
+    height: 100%;
+}
+
+.navegation {
+    width: 100%;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    bottom: 40px;
+}
+
+.btn-nav {
+    width: 12px;
+    height: 12px;
+    background: white;
+    border-radius: 50%;
+    transition: all 0.5s;
+}
+
+.btn-nav:not(:last-child){
+    margin-right: 7px;
+}
+
+.btn-nav:hover {
+    transform: scale(1.5);
+    cursor: pointer;
+}
+
+.content-slide {
+   position: absolute;
+    color: white;
+    width: 400px;
+    top: 75%;
+    transform: translateY(-50%);
+    left: 470px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.300);
+    border-radius: 10px;
+    padding: 5px;
+    transition: all 1s linear;
+}
+.content-title {
+    font-size: 2.5rem;
+}
+
+.content-text {
+    font-size: 1.25rem;
+    line-height: 1.5;
+}
+
+.content-btn {
+    padding: 7px 15px;
+    margin: 15px;
+    border: none;
+    border-radius: 7px;
+    background: linear-gradient(to right,lightpink,brown);
+    color: white;
+    font-weight: bold;
+}
+
+.producto {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-top: 20px; /* Agrega un espacio de 40px en la parte superior */
+}
+
+.contenedor {
+    position: relative; 
+    overflow: hidden;
+}
+
+.producto img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.producto h2 {
+    position: absolute;
+    top: 90%; 
+    left: 50%; /* centrado horizontal */
+    transform: translate(-50%, -50%); /* corrige el centro */
+    color: white;
+    font-size: 24px;
+}
+
+.texto{
+    text-align: center;
+    background:#d6736dff;
+    color: white;
+    font-size: 1.35rem;
+}
+
+.tarjetas{
+    width: 100%;
+    height:100%;
+    background:#f7d7d0ff;
+    display: grid;
+    grid-template-columns:repeat(4,1fr);
+
+}
+
+.titulo{
+    text-align: center;
+    font-size: 31px;
+    background:#7D1C4A;
+    color: white;
+}
+
+.card{
+    height: 100px;
+    width: 100px;
+    padding: 50px 50px;
+    transition: transform 0.3s ease; /* Esto hace la animación suave */
+}
+.card-img{
+    height: 419%;
+}
+
+.card:hover {
+    transform: translateY(-10px); /* Se desplaza 10px hacia arriba */
+}
+
+.card-img img{
+    height: 100px;
+    width: 226px;
+    filter: drop-shadow(0 0 10px rgba(0,0,0,0.8));
+}
+ 
+.card-body{
+    text-align: center;
+    width: 210%;
+    color: white;
+    background:rgba(128, 0, 50, 1) ;
+    padding: 20px;
+    border-radius: 0 0 10px 10px;
+    font-size: 1.15rem;
+}
+
+
+.lili{
+    width: 100px;
+    padding: 50px 50px;
+    transition: transform 0.3s ease; /* Esto hace la animación suave */
+}
+
+.lili:hover {
+    transform: translateY(-10px); /* Se desplaza 10px hacia arriba */
+}
+
+.imagen{
+    background: url(..//images/OIP.webp);
+    background-size: cover;
+    height: 400px;
+    width: 50px;
+    border-radius: 10px 10px 0 0;
+    position: relative;
+}
+
+.imagen img{
+    width: 200px;
+    margin: -80px  22px 30px;
+    position: absolute;
+    filter: drop-shadow(0 0 10px rgba(0,0,0,0.8));
+}
+ 
+.descripcion{
+    text-align: center;
+    height: 85px;
+    width: 210%;
+    color: white;
+    background:rgba(128, 0, 50, 1);
+    padding: 20px;
+    border-radius: 0 0 10px 10px;
+    z-index: 2;
+    font-size: 1.15rem;
+    position: relative;
+}
+
+/*cuadro de detalles*/
+    .anchor {
+        display: none;
+    }
+    .ver-detalles {
+    color:#FCC61D;       /* Cambia el color del texto a blanco */
+    font-weight: bold;
+    text-decoration: none; /* Opcional: quita el subrayado */
+    }
+    
+    /* Detalles compactos */
+    .extra {
+      display: none;
+      padding: 8px;
+      background:rgba(128, 0, 50, 1) ;
+      border: 1px solid rgba(128, 0, 50, 1);
+      border-radius: 6px;
+      font-size:13px;
+      color: #fff;
+    }
+
+    #camisa1-open:target ~ .lili .extra {
+        display: block;
+    }
+
+    .extra a {
+      display: block;
+      font-size: 12px;
+      color:#FCC61D;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+.lolo{
+    width: 100px;
+    padding: 50px 50px;
+    transition: transform 0.3s ease; /* Esto hace la animación suave */
+}
+
+.lolo:hover {
+    transform: translateY(-10px); /* Se desplaza 10px hacia arriba */
+}
+
+.imagef{
+    background: url(../images/camisetas-para-hombre-44090839-20135_3.jpg);
+    background-size: cover;
+    height: 400px;
+    width: 250px;
+    border-radius: 10px 10px 0 0;
+    position: relative;
+}
+
+.imagef img{
+    width: 200px;
+    margin: -80px  22px 30px;
+    position: absolute;
+    filter: drop-shadow(0 0 10px rgba(0,0,0,0.8));
+}
+ 
+.description{
+    text-align: center;
+    height: 85px;
+    width: 210%;
+    color: white;
+    background:rgba(128, 0, 50, 1);
+    padding: 20px;
+    border-radius: 0 0 10px 10px;
+    z-index: 2;
+    font-size: 1.15rem;
+    position: relative;
+    cursor: pointer;
+}
+
+/*cuadro de detalles*/
+    .anchorst {
+        display: none;
+    }
+    .ver-detallesd {
+    color:#FCC61D;       /* Cambia el color del texto a blanco */
+    font-weight: bold;
+    text-decoration: none; /* Opcional: quita el subrayado */
+    }
+    
+    /* Detalles compactos */
+    .extrad {
+      display: none;
+      padding: 8px;
+      background:rgba(128, 0, 50, 1) ;
+      border: 1px solid rgba(128, 0, 50, 1);
+      border-radius: 6px;
+      font-size:13px;
+      color: #fff;
+    }
+
+    #camisa3-abier:target ~ .lolo .extrad {
+        display: block;
+    }
+
+    .extrad a {
+      display: block;
+      font-size: 12px;
+      color:#FCC61D;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+.lulu{
+    width: 100px;
+    padding: 50px 50px;
+    transition: transform 0.3s ease; /* Esto hace la animación suave */
+}
+
+.lulu:hover {
+    transform: translateY(-10px); /* Se desplaza 10px hacia arriba */
+}
+
+.imageo{
+    background: url(../images/00104280298599____3__967x1200.avif);
+    background-size: cover;
+    height: 400px;
+    width: 250px;
+    border-radius: 10px 10px 0 0;
+    position: relative;
+}
+
+.imageo img{
+    width: 200px;
+    margin: -80px  22px 30px;
+    position: absolute;
+    filter: drop-shadow(0 0 10px rgba(0,0,0,0.8));
+}
+ 
+.descriptions{
+    text-align: center;
+    height: 85px;
+    width: 210%;
+    color: white;
+    background:rgba(128, 0, 50, 1);
+    padding: 20px;
+    border-radius: 0 0 10px 10px;
+    z-index: 2;
+    font-size: 1.15rem;
+    position: relative;
+    cursor: pointer;
+}
+.cigus{
+    text-align: center;
+    border: 2px solid white;
+    background: white;
+    color: black;
+}
+.titulex{
+    text-align: center;
+    font-size: 31px;
+    background:#7D1C4A;
+    color: white;
+}
+
+   .ancho {
+        display: none;
+    }
+    .ver-detall {
+    color:#FCC61D;       /* Cambia el color del texto a blanco */
+    font-weight: bold;
+    text-decoration: none; /* Opcional: quita el subrayado */
+    }
+
+/* Detalles compactos */
+    .extrac{
+      display: none;
+      padding: 8px;
+      background:rgba(128, 0, 50, 1) ;
+      border: 1px solid rgba(128, 0, 50, 1);
+      border-radius: 6px;
+      font-size:13px;
+      color: #fff;
+    }
+
+    #camisa4-abiert:target ~ .lulu .extrac {
+        display: block;
+    }
+
+    .extrac a {
+      display: block;
+      font-size: 12px;
+      color:#FCC61D;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+.cardu{
+    width: 100px;
+    padding: 50px 50px;
+    transition: transform 0.3s ease; /* Esto hace la animación suave */
+}
+
+.cardu:hover {
+    transform: translateY(-10px); /* Se desplaza 10px hacia arriba */
+}
+
+.imagi{
+    background: url(..//images/camisa-formal-cuadros-arrow.jpg);
+    background-size: cover;
+    height: 400px;
+    width: 250px;
+    border-radius: 10px 10px 0 0;
+    position: relative;
+}
+
+.imagi img{
+    width: 200px;
+    margin: -80px  22px 30px;
+    position: absolute;
+    filter: drop-shadow(0 0 10px rgba(0,0,0,0.8));
+}
+ 
+.bodyes{
+    text-align: center;
+    height: 85px;
+    width: 210%;
+    color: white;
+    background:rgba(128, 0, 50, 1) ;
+    padding: 20px;
+    border-radius: 0 0 10px 10px;
+    z-index: 2;
+    font-size: 1.15rem;
+    position: relative;
+    cursor: pointer;
+}
+
+    .anchol {
+        display: none;
+    }
+    .ver-detallis {
+    color:#FCC61D;       /* Cambia el color del texto a blanco */
+    font-weight: bold;
+    text-decoration: none; /* Opcional: quita el subrayado */
+    }
+
+/* Detalles compactos */
+    .extraa{
+      display: none;
+      padding: 8px;
+      background:rgba(128, 0, 50, 1) ;
+      border: 1px solid rgba(128, 0, 50, 1);
+      border-radius: 6px;
+      font-size:13px;
+      color: #fff;
+    }
+
+    #camisa5-abiertd:target ~ .cardu .extraa {
+        display: block;
+    }
+
+    .extraa a {
+      display: block;
+      font-size: 12px;
+      color:#FCC61D;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+
+.cardius{
+    width: 100px;
+    padding: 50px 50px;
+    transition: transform 0.3s ease; /* Esto hace la animación suave */
+}
+
+.cardius:hover {
+    transform: translateY(-10px); /* Se desplaza 10px hacia arriba */
+}
+
+.imagis{
+    background: url(..//images/OIP\ \(9\).webp);
+    background-size: cover;
+    height: 400px;
+    width: 250px;
+    border-radius: 10px 10px 0 0;
+    position: relative;
+}
+
+.imagis img{
+    width: 200px;
+    margin: -80px  22px 30px;
+    position: absolute;
+    filter: drop-shadow(0 0 10px rgba(0,0,0,0.8));
+}
+ 
+.bod{
+    text-align: center;
+    height: 85px;
+    width: 210%;
+    color: white;
+    background:rgba(128, 0, 50, 1) ;
+    padding: 20px;
+    border-radius: 0 0 10px 10px;
+    z-index: 2;
+    font-size: 1.15rem;
+    position: relative;
+    cursor: pointer;
+}
+
+ .anc {
+        display: none;
+    }
+    .ver-deta {
+    color:#FCC61D;       /* Cambia el color del texto a blanco */
+    font-weight: bold;
+    text-decoration: none; /* Opcional: quita el subrayado */
+    }
+
+/* Detalles compactos */
+    .extr{
+      display: none;
+      padding: 8px;
+      background:rgba(128, 0, 50, 1) ;
+      border: 1px solid rgba(128, 0, 50, 1);
+      border-radius: 6px;
+      font-size:13px;
+      color: #fff;
+    }
+
+    #camisa6-abie:target ~ .cardius .extr{
+        display: block;
+    }
+
+    .extr a {
+      display: block;
+      font-size: 12px;
+      color:#FCC61D;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+
+.cards{
+    width: 100px;
+    padding: 50px 50px;
+    transition: transform 0.3s ease; /* Esto hace la animación suave */
+}
+
+.cards:hover {
+    transform: translateY(-10px); /* Se desplaza 10px hacia arriba */
+}
+
+.imagish{
+    background: url(..//images/Sueter-para-hombres-con-logo.webp);
+    background-size: cover;
+    height: 400px;
+    width: 250px;
+    border-radius: 10px 10px 0 0;
+    position: relative;
+}
+
+.imagish img{
+    width: 200px;
+    margin: -80px  22px 30px;
+    position: absolute;
+    filter: drop-shadow(0 0 10px rgba(0,0,0,0.8));
+}
+ 
+.bodl{
+    text-align: center;
+    height: 85px;
+    width: 210%;
+    color: white;
+    background:rgba(128, 0, 50, 1) ;
+    padding: 20px;
+    border-radius: 0 0 10px 10px;
+    z-index: 2;
+    font-size: 1.15rem;
+    position: relative;
+    cursor: pointer;
+}
+
+.anco {
+        display: none;
+    }
+    .ver-detal {
+    color:#FCC61D;       /* Cambia el color del texto a blanco */
+    font-weight: bold;
+    text-decoration: none; /* Opcional: quita el subrayado */
+    }
+
+/* Detalles compactos */
+    .ext{
+      display: none;
+      padding: 8px;
+      background:rgba(128, 0, 50, 1) ;
+      border: 1px solid rgba(128, 0, 50, 1);
+      border-radius: 6px;
+      font-size:13px;
+      color: #fff;
+    }
+
+    #camisa7-abie:target ~ .cards .ext{
+        display: block;
+    }
+
+    .ext a {
+      display: block;
+      font-size: 12px;
+      color:#FCC61D;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+.cardsd{
+    width: 100px;
+    padding: 50px 50px;
+    transition: transform 0.3s ease; /* Esto hace la animación suave */
+}
+
+.cardsd:hover {
+    transform: translateY(-10px); /* Se desplaza 10px hacia arriba */
+}
+
+.imagishes{
+    background: url(..//images/43c487155e64a2dac4f85ac3757979d6.jpg);
+    background-size: cover;
+    height: 400px;
+    width: 250px;
+    border-radius: 10px 10px 0 0;
+    position: relative;
+}
+
+.imagishes img{
+    width: 200px;
+    margin: -80px  22px 30px;
+    position: absolute;
+    filter: drop-shadow(0 0 10px rgba(0,0,0,0.8));
+}
+ 
+.bodle{
+    text-align: center;
+    height: 85px;
+    width: 210%;
+    color: white;
+    background:rgba(128, 0, 50, 1) ;
+    padding: 20px;
+    border-radius: 0 0 10px 10px;
+    z-index: 2;
+    font-size: 1.15rem;
+    position: relative;
+    cursor: pointer;
+}
+
+.ancol {
+        display: none;
+    }
+    .ver-detalp {
+    color:#FCC61D;       /* Cambia el color del texto a blanco */
+    font-weight: bold;
+    text-decoration: none; /* Opcional: quita el subrayado */
+    }
+
+/* Detalles compactos */
+    .ex{
+      display: none;
+      padding: 8px;
+      background:rgba(128, 0, 50, 1) ;
+      border: 1px solid rgba(128, 0, 50, 1);
+      border-radius: 6px;
+      font-size:13px;
+      color: #fff;
+    }
+
+    #camisa8-abie:target ~ .cardsd .ex{
+        display: block;
+    }
+
+    .ex a {
+      display: block;
+      font-size: 12px;
+      color:#FCC61D;
+      font-weight: bold;
+      text-decoration: none;
+    }
+.tarjetasss{
+    width: 100%;
+    height:100% ;
+    background:#f7d7d0ff;
+    display: grid;
+    grid-template-columns:repeat(4,1fr);
+
+}
+
+.jaja{
+    width: 100px;
+    padding: 50px 50px;
+    transition: transform 0.3s ease; /* Esto hace la animación suave */
+}
+
+.jaja:hover {
+    transform: translateY(-10px); /* Se desplaza 10px hacia arriba */
+}
+
+.imageu{
+    background: url(..//images/blusa-de-vestir-BU437D00.jpg);
+    background-size: cover;
+    height: 400px;
+    width: 250px;
+    border-radius: 10px 10px 0 0;
+    position: relative;
+}
+
+.imageu img{
+    width: 200px;
+    margin: -80px  22px 30px;
+    position: absolute;
+    filter: drop-shadow(0 0 10px rgba(0,0,0,0.8));
+}
+ 
+.descriptionsdf{
+    text-align: center;
+    height: 85px;
+    width: 210%;
+    color: white;
+    background:rgba(128, 0, 50, 1);
+    padding: 20px;
+    border-radius: 0 0 10px 10px;
+    z-index: 2;
+    font-size: 1.15rem;
+    position: relative;
+    cursor: pointer;
+}
+
+.cod{
+    text-align: center;
+    border: 2px solid white;
+    background: white;
+    color: black;
+}
+
+.ancoll {
+        display: none;
+    }
+    .ver-detalpñ {
+    color:#FCC61D;       /* Cambia el color del texto a blanco */
+    font-weight: bold;
+    text-decoration: none; /* Opcional: quita el subrayado */
+    }
+
+/* Detalles compactos */
+    .e{
+      display: none;
+      padding: 8px;
+      background:rgba(128, 0, 50, 1) ;
+      border: 1px solid rgba(128, 0, 50, 1);
+      border-radius: 6px;
+      font-size:13px;
+      color: #fff;
+    }
+
+    #camisa9-abie:target ~ .jaja .e{
+        display: block;
+    }
+
+    .e a {
+      display: block;
+      font-size: 12px;
+      color:#FCC61D;
+      font-weight: bold;
+      text-decoration: none;
+    }
+.jeje{
+    width: 100px;
+    padding: 50px 50px;
+    transition: transform 0.3s ease; /* Esto hace la animación suave */
+}
+
+.jeje:hover {
+    transform: translateY(-10px); /* Se desplaza 10px hacia arriba */
+}
+
+.imageus{
+    background: url(..//images/7690da941cec3694845ca35374f6f654.jpg);
+    background-size: cover;
+    height: 400px;
+    width: 250px;
+    border-radius: 10px 10px 0 0;
+    position: relative;
+}
+
+.imageus img{
+    width: 200px;
+    margin: -80px  22px 30px;
+    position: absolute;
+    filter: drop-shadow(0 0 10px rgba(0,0,0,0.8));
+}
+ 
+.descriptionsdfi{
+    text-align: center;
+    height: 85px;
+    width: 210%;
+    color: white;
+    background:rgba(128, 0, 50, 1);
+    padding: 20px;
+    border-radius: 0 0 10px 10px;
+    z-index: 2;
+    font-size: 1.15rem;
+    position: relative;
+    cursor: pointer;
+}
+
+.ancolls {
+        display: none;
+    }
+    .ver-detalpñs {
+    color:#FCC61D;       /* Cambia el color del texto a blanco */
+    font-weight: bold;
+    text-decoration: none; /* Opcional: quita el subrayado */
+    }
+
+/* Detalles compactos */
+    .estras{
+      display: none;
+      padding: 8px;
+      background:rgba(128, 0, 50, 1) ;
+      border: 1px solid rgba(128, 0, 50, 1);
+      border-radius: 6px;
+      font-size:13px;
+      color: #fff;
+    }
+
+    #camisa10-abie:target ~ .jeje .estras{
+        display: block;
+    }
+
+    .estras a {
+      display: block;
+      font-size: 12px;
+      color:#FCC61D;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+
+.hshs{
+    width: 100px;
+    padding: 50px 50px;
+    transition: transform 0.3s ease; /* Esto hace la animación suave */
+}
+
+.hshs:hover {
+    transform: translateY(-10px); /* Se desplaza 10px hacia arriba */
+}
+
+.imageusq{
+    background: url(..//images/GettyImages-1426174020.webp);
+    background-size: cover;
+    height: 400px;
+    width: 250px;
+    border-radius: 10px 10px 0 0;
+    position: relative;
+}
+
+.imageusq img{
+    width: 200px;
+    margin: -80px  22px 30px;
+    position: absolute;
+    filter: drop-shadow(0 0 10px rgba(0,0,0,0.8));
+}
+ 
+.descro{
+    text-align: center;
+    height: 85px;
+    width: 210%;
+    color: white;
+    background:rgba(128, 0, 50, 1);
+    padding: 20px;
+    border-radius: 0 0 10px 10px;
+    z-index: 2;
+    font-size: 1.15rem;
+    position: relative;
+    cursor: pointer;
+}
+
+.an {
+        display: none;
+    }
+    .ver-de {
+    color:#FCC61D;       /* Cambia el color del texto a blanco */
+    font-weight: bold;
+    text-decoration: none; /* Opcional: quita el subrayado */
+    }
+
+/* Detalles compactos */
+    .estrass{
+      display: none;
+      padding: 8px;
+      background:rgba(128, 0, 50, 1) ;
+      border: 1px solid rgba(128, 0, 50, 1);
+      border-radius: 6px;
+      font-size:13px;
+      color: #fff;
+    }
+
+    #camisa11-abie:target ~ .hshs .estrass{
+        display: block;
+    }
+
+    .estrass a {
+      display: block;
+      font-size: 12px;
+      color:#FCC61D;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+
+.haha{
+    width: 100px;
+    padding: 50px 50px;
+    transition: transform 0.3s ease; /* Esto hace la animación suave */
+}
+
+.haha:hover {
+    transform: translateY(-10px); /* Se desplaza 10px hacia arriba */
+}
+
+.imageusque{
+    background: url(..//images/OIP\ \(13\).webp);
+    background-size: cover;
+    height: 400px;
+    width: 250px;
+    border-radius: 10px 10px 0 0;
+    position: relative;
+}
+
+.imageusque img{
+    width: 200px;
+    margin: -80px  22px 30px;
+    position: absolute;
+    filter: drop-shadow(0 0 10px rgba(0,0,0,0.8));
+}
+ 
+.descrop{
+    text-align: center;
+    height: 85px;
+    width: 210%;
+    color: white;
+    background:rgba(128, 0, 50, 1);
+    padding: 20px;
+    border-radius: 0 0 10px 10px;
+    z-index: 2;
+    font-size: 1.15rem;
+    position: relative;
+    cursor: pointer;
+}
+
+
+.tall {
+        display: none;
+    }
+    .ver-d {
+    color:#FCC61D;       /* Cambia el color del texto a blanco */
+    font-weight: bold;
+    text-decoration: none; /* Opcional: quita el subrayado */
+    }
+
+/* Detalles compactos */
+    .estrasss{
+      display: none;
+      padding: 8px;
+      background:rgba(128, 0, 50, 1) ;
+      border: 1px solid rgba(128, 0, 50, 1);
+      border-radius: 6px;
+      font-size:13px;
+      color: #fff;
+    }
+
+    #camisa12-abie:target ~ .haha .estrasss{
+        display: block;
+    }
+
+    .estrasss a {
+      display: block;
+      font-size: 12px;
+      color:#FCC61D;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+.hehe{
+    width: 100px;
+    padding: 50px 50px;
+    transition: transform 0.3s ease; /* Esto hace la animación suave */
+}
+
+.hehe:hover {
+    transform: translateY(-10px); /* Se desplaza 10px hacia arriba */
+}
+
+.photo{
+    background: url(..//images/774a268515ff3156cc157de79d7b3324.jpg);
+    background-size: cover;
+    height: 400px;
+    width: 250px;
+    border-radius: 10px 10px 0 0;
+    position: relative;
+}
+
+.photo img{
+    width: 200px;
+    margin: -80px  22px 30px;
+    position: absolute;
+    filter: drop-shadow(0 0 10px rgba(0,0,0,0.8));
+}
+ 
+.discrop{
+    text-align: center;
+    height: 85px;
+    width: 210%;
+    color: white;
+    background:rgba(128, 0, 50, 1);
+    padding: 20px;
+    border-radius: 0 0 10px 10px;
+    z-index: 2;
+    font-size: 1.15rem;
+    position: relative;
+    cursor: pointer;
+}
+
+.tell {
+        display: none;
+    }
+    .ver-di {
+    color:#FCC61D;       /* Cambia el color del texto a blanco */
+    font-weight: bold;
+    text-decoration: none; /* Opcional: quita el subrayado */
+    }
+
+/* Detalles compactos */
+    .estra{
+      display: none;
+      padding: 8px;
+      background:rgba(128, 0, 50, 1) ;
+      border: 1px solid rgba(128, 0, 50, 1);
+      border-radius: 6px;
+      font-size:13px;
+      color: #fff;
+    }
+
+    #camisa13-abie:target ~ .hehe .estra{
+        display: block;
+    }
+
+    .estra a {
+      display: block;
+      font-size: 12px;
+      color:#FCC61D;
+      font-weight: bold;
+      text-decoration: none;
+    }
+.hihi{
+    width: 100px;
+    padding: 50px 50px;
+    transition: transform 0.3s ease; /* Esto hace la animación suave */
+}
+
+.hihi:hover {
+    transform: translateY(-10px); /* Se desplaza 10px hacia arriba */
+}
+
+.photos{
+    background: url(..//images/15602817472_3c6f92f0f9_b.jpg);
+    background-size: cover;
+    height: 400px;
+    width: 250px;
+    border-radius: 10px 10px 0 0;
+    position: relative;
+}
+
+.photos img{
+    width: 200px;
+    margin: -80px  22px 30px;
+    position: absolute;
+    filter: drop-shadow(0 0 10px rgba(0,0,0,0.8));
+}
+ 
+.discrope{
+    text-align: center;
+    height: 85px;
+    width: 210%;
+    color: white;
+    background:rgba(128, 0, 50, 1);
+    padding: 20px;
+    border-radius: 0 0 10px 10px;
+    z-index: 2;
+    font-size: 1.15rem;
+    position: relative;
+    cursor: pointer;
+}
+
+.till {
+        display: none;
+    }
+    .ver-dis {
+    color:#FCC61D;       /* Cambia el color del texto a blanco */
+    font-weight: bold;
+    text-decoration: none; /* Opcional: quita el subrayado */
+    }
+
+/* Detalles compactos */
+    .es{
+      display: none;
+      padding: 8px;
+      background:rgba(128, 0, 50, 1) ;
+      border: 1px solid rgba(128, 0, 50, 1);
+      border-radius: 6px;
+      font-size:13px;
+      color: #fff;
+    }
+
+    #camisa14-abie:target ~ .hihi .es{
+        display: block;
+    }
+
+    .es a {
+      display: block;
+      font-size: 12px;
+      color:#FCC61D;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+.hoho{
+    width: 100px;
+    padding: 50px 50px;
+    transition: transform 0.3s ease; /* Esto hace la animación suave */
+}
+
+.hoho:hover {
+    transform: translateY(-10px); /* Se desplaza 10px hacia arriba */
+}
+
+.photose{
+    background: url(..//images/524e41da12599f3c6241eb963cddcb17.jpg);
+    background-size: cover;
+    height: 400px;
+    width: 250px;
+    border-radius: 10px 10px 0 0;
+    position: relative;
+}
+
+.photose img{
+    width: 200px;
+    margin: -80px  22px 30px;
+    position: absolute;
+    filter: drop-shadow(0 0 10px rgba(0,0,0,0.8));
+}
+ 
+.discropel{
+    text-align: center;
+    height: 85px;
+    width: 210%;
+    color: white;
+    background:rgba(128, 0, 50, 1);
+    padding: 20px;
+    border-radius: 0 0 10px 10px;
+    z-index: 2;
+    font-size: 1.15rem;
+    position: relative;
+    cursor: pointer;
+}
+
+.toll {
+        display: none;
+    }
+    .ver-disp {
+    color:#FCC61D;       /* Cambia el color del texto a blanco */
+    font-weight: bold;
+    text-decoration: none; /* Opcional: quita el subrayado */
+    }
+
+/* Detalles compactos */
+    .edtras{
+      display: none;
+      padding: 8px;
+      background:rgba(128, 0, 50, 1) ;
+      border: 1px solid rgba(128, 0, 50, 1);
+      border-radius: 6px;
+      font-size:13px;
+      color: #fff;
+    }
+
+    #camisa15-abie:target ~ .hoho .edtras{
+        display: block;
+    }
+
+    .edtras a {
+      display: block;
+      font-size: 12px;
+      color:#FCC61D;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+.huhu{
+    width: 100px;
+    padding: 50px 50px;
+    transition: transform 0.3s ease; /* Esto hace la animación suave */
+}
+
+.huhu:hover {
+    transform: translateY(-10px); /* Se desplaza 10px hacia arriba */
+}
+
+.foto{
+    background: url(..//images/calca_jeans_skinny_modeladora_cintura_alta_modelo_levanta_bumbum_azul_medio_51925_1_b4ae406b58409bd95c25718ea1d8ef87.webp);
+    background-size: cover;
+    height: 400px;
+    width: 250px;
+    border-radius: 10px 10px 0 0;
+    position: relative;
+}
+
+.foto img{
+    width: 200px;
+    margin: -80px  22px 30px;
+    position: absolute;
+    filter: drop-shadow(0 0 10px rgba(0,0,0,0.8));
+}
+ 
+.dascrip{
+    text-align: center;
+    height: 85px;
+    width: 210%;
+    color: white;
+    background:rgba(128, 0, 50, 1);
+    padding: 20px;
+    border-radius: 0 0 10px 10px;
+    z-index: 2;
+    font-size: 1.15rem;
+    position: relative;
+    cursor: pointer;
+}
+
+.twll {
+        display: none;
+    }
+    .ver-dispon{
+    color:#FCC61D;       /* Cambia el color del texto a blanco */
+    font-weight: bold;
+    text-decoration: none; /* Opcional: quita el subrayado */
+    }
+
+/* Detalles compactos */
+    .eftras{
+      display: none;
+      padding: 8px;
+      background:rgba(128, 0, 50, 1) ;
+      border: 1px solid rgba(128, 0, 50, 1);
+      border-radius: 6px;
+      font-size:13px;
+      color: #fff;
+    }
+
+    #camisa16-abie:target ~ .huhu .eftras {
+        display: block;
+    }
+
+    .eftras a {
+      display: block;
+      font-size: 12px;
+      color:#FCC61D;
+      font-weight: bold;
+      text-decoration: none;
+    }
+.titux{
+    text-align: center;
+    font-size: 31px;
+    background:#7D1C4A;
+    color: white;
+}
+
+.tarjetus{
+    width: 100%;
+    height:100% ;
+    background:#f7d7d0ff;
+    display: grid;
+    grid-template-columns:repeat(4,1fr);
+
+}
+.gaga{
+    width: 100px;
+    padding: 50px 50px;
+    transition: transform 0.3s ease; /* Esto hace la animación suave */
+}
+
+.gaga:hover {
+    transform: translateY(-10px); /* Se desplaza 10px hacia arriba */
+}
+
+.fotos{
+    background: url(..//images/4f7cb331-8b5f-457b-b298-e47a20c755e9_1.854e051c858a03bf6763bee19adda975.jpeg);
+    background-size: cover;
+    height: 400px;
+    width: 250px;
+    border-radius: 10px 10px 0 0;
+    position: relative;
+}
+
+.fotos img{
+    width: 200px;
+    margin: -80px  22px 30px;
+    position: absolute;
+    filter: drop-shadow(0 0 10px rgba(0,0,0,0.8));
+}
+ 
+.dascript{
+    text-align: center;
+    height: 85px;
+    width: 210%;
+    color: white;
+    background:rgba(128, 0, 50, 1);
+    padding: 20px;
+    border-radius: 0 0 10px 10px;
+    z-index: 2;
+    font-size: 1.15rem;
+    position: relative;
+    cursor: pointer;
+}
+
+
+.tpll {
+        display: none;
+    }
+    .ver-dñ{
+    color:#FCC61D;       /* Cambia el color del texto a blanco */
+    font-weight: bold;
+    text-decoration: none; /* Opcional: quita el subrayado */
+    }
+
+/* Detalles compactos */
+    .ettras{
+      display: none;
+      padding: 8px;
+      background:rgba(128, 0, 50, 1) ;
+      border: 1px solid rgba(128, 0, 50, 1);
+      border-radius: 6px;
+      font-size:13px;
+      color: #fff;
+    }
+
+    #camisa17-abie:target ~ .gaga .ettras {
+        display: block;
+    }
+
+    .ettras a {
+      display: block;
+      font-size: 12px;
+      color:#FCC61D;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+.gege{
+    width: 100px;
+    padding: 50px 50px;
+    transition: transform 0.3s ease; /* Esto hace la animación suave */
+}
+
+.gege:hover {
+    transform: translateY(-10px); /* Se desplaza 10px hacia arriba */
+}
+
+.fotosga{
+    background: url(../images/TEREZ_FEB2022_33771.jpg);
+    background-size: cover;
+    height: 400px;
+    width: 250px;
+    border-radius: 10px 10px 0 0;
+    position: relative;
+}
+
+.fotosga img{
+    width: 200px;
+    margin: -80px  22px 30px;
+    position: absolute;
+    filter: drop-shadow(0 0 10px rgba(0,0,0,0.8));
+}
+ 
+.dascripts{
+    text-align: center;
+    height: 85px;
+    width: 210%;
+    color: white;
+    background:rgba(128, 0, 50, 1);
+    padding: 20px;
+    border-radius: 0 0 10px 10px;
+    z-index: 2;
+    font-size: 1.15rem;
+    position: relative;
+    cursor: pointer;
+}
+
+.tkll {
+        display: none;
+    }
+    .ver-dño{
+    color:#FCC61D;       /* Cambia el color del texto a blanco */
+    font-weight: bold;
+    text-decoration: none; /* Opcional: quita el subrayado */
+    }
+
+/* Detalles compactos */
+    .eltras{
+      display: none;
+      padding: 8px;
+      background:rgba(128, 0, 50, 1) ;
+      border: 1px solid rgba(128, 0, 50, 1);
+      border-radius: 6px;
+      font-size:13px;
+      color: #fff;
+    }
+
+    #camisa18-abie:target ~ .gege .eltras {
+        display: block;
+    }
+
+    .eltras a {
+      display: block;
+      font-size: 12px;
+      color:#FCC61D;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+.gigi{
+    width: 100px;
+    padding: 50px 50px;
+    transition: transform 0.3s ease; /* Esto hace la animación suave */
+}
+
+
+.gigi:hover {
+    transform: translateY(-10px); /* Se desplaza 10px hacia arriba */
+}
+
+.fotosg{
+    background: url(..//images/felisa-cift-cirtli-hakiki-deri-kiz-coc-16430f.webp);
+    background-size: cover;
+    height: 400px;
+    width: 250px;
+    border-radius: 10px 10px 0 0;
+    position: relative;
+}
+
+.fotosg img{
+    width: 200px;
+    margin: -80px  22px 30px;
+    position: absolute;
+    filter: drop-shadow(0 0 10px rgba(0,0,0,0.8));
+}
+ 
+.dis{
+    text-align: center;
+    height: 85px;
+    width: 210%;
+    color: white;
+    background:rgba(128, 0, 50, 1);
+    padding: 20px;
+    border-radius: 0 0 10px 10px;
+    z-index: 2;
+    font-size: 1.15rem;
+    position: relative;
+    cursor: pointer;
+}
+
+.codiñas{
+    text-align: center;
+    border: 2px solid white;
+    background: white;
+    color: black;
+}
+
+.tnll {
+        display: none;
+    }
+    .ver-dños{
+    color:#FCC61D;       /* Cambia el color del texto a blanco */
+    font-weight: bold;
+    text-decoration: none; /* Opcional: quita el subrayado */
+    }
+
+/* Detalles compactos */
+    .entras{
+      display: none;
+      padding: 8px;
+      background:rgba(128, 0, 50, 1) ;
+      border: 1px solid rgba(128, 0, 50, 1);
+      border-radius: 6px;
+      font-size:13px;
+      color: #fff;
+    }
+
+    #camisa19-abie:target ~ .gigi .entras {
+        display: block;
+    }
+
+    .entras a {
+      display: block;
+      font-size: 12px;
+      color:#FCC61D;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+
+
+.gogo{
+    width: 100px;
+    padding: 50px 50px;
+    transition: transform 0.3s ease; /* Esto hace la animación suave */
+}
+
+
+.gogo:hover {
+    transform: translateY(-10px); /* Se desplaza 10px hacia arriba */
+}
+
+.fhotos{
+    background: url(..//images/2594O-83X-001-1-507693_9.avif);
+    background-size: cover;
+    height: 400px;
+    width: 250px;
+    border-radius: 10px 10px 0 0;
+    position: relative;
+}
+
+.fhotos img{
+    width: 200px;
+    margin: -80px  22px 30px;
+    position: absolute;
+    filter: drop-shadow(0 0 10px rgba(0,0,0,0.8));
+}
+ 
+.dos{
+    text-align: center;
+    height: 85px;
+    width: 210%;
+    color: white;
+    background:rgba(128, 0, 50, 1);
+    padding: 20px;
+    border-radius: 0 0 10px 10px;
+    z-index: 2;
+    font-size: 1.15rem;
+    position: relative;
+    cursor: pointer;
+}
+
+.tnkll {
+        display: none;
+    }
+    .ver-dlp{
+    color:#FCC61D;       /* Cambia el color del texto a blanco */
+    font-weight: bold;
+    text-decoration: none; /* Opcional: quita el subrayado */
+    }
+
+/* Detalles compactos */
+    .emtras{
+      display: none;
+      padding: 8px;
+      background:rgba(128, 0, 50, 1) ;
+      border: 1px solid rgba(128, 0, 50, 1);
+      border-radius: 6px;
+      font-size:13px;
+      color: #fff;
+    }
+
+    #camisa20-abie:target ~ .gogo .emtras {
+        display: block;
+    }
+
+    .emtras a {
+      display: block;
+      font-size: 12px;
+      color:#FCC61D;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+
+.gugu{
+    width: 100px;
+    padding: 50px 50px;
+    transition: transform 0.3s ease; /* Esto hace la animación suave */
+}
+
+
+.gugu:hover {
+    transform: translateY(-10px); /* Se desplaza 10px hacia arriba */
+}
+
+.picture{
+    background: url(..//images/2444K.jpg);
+    background-size: cover;
+    height: 400px;
+    width: 250px;
+    border-radius: 10px 10px 0 0;
+    position: relative;
+}
+
+.picture img{
+    width: 200px;
+    margin: -80px  22px 30px;
+    position: absolute;
+    filter: drop-shadow(0 0 10px rgba(0,0,0,0.8));
+}
+ 
+.dus{
+    text-align: center;
+    height: 85px;
+    width: 210%;
+    color: white;
+    background:rgba(128, 0, 50, 1);
+    padding: 20px;
+    border-radius: 0 0 10px 10px;
+    z-index: 2;
+    font-size: 1.15rem;
+    position: relative;
+    cursor: pointer;
+}
+
+.tnklla{
+        display: none;
+    }
+    .ver-detalo{
+    color:#FCC61D;       /* Cambia el color del texto a blanco */
+    font-weight: bold;
+    text-decoration: none; /* Opcional: quita el subrayado */
+    }
+
+/* Detalles compactos */
+    .ebtras{
+      display: none;
+      padding: 8px;
+      background:rgba(128, 0, 50, 1) ;
+      border: 1px solid rgba(128, 0, 50, 1);
+      border-radius: 6px;
+      font-size:13px;
+      color: #fff;
+    }
+
+    #camisa21-abie:target ~ .gugu .ebtras {
+        display: block;
+    }
+
+    .ebtras a {
+      display: block;
+      font-size: 12px;
+      color:#FCC61D;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+
+.kaka{
+    width: 100px;
+    padding: 50px 50px;
+    transition: transform 0.3s ease; /* Esto hace la animación suave */
+}
+
+
+.kaka:hover {
+    transform: translateY(-10px); /* Se desplaza 10px hacia arriba */
+}
+
+.pictures{
+    background: url(..//images/OIP\ \(18\).webp);
+    background-size: cover;
+    height: 400px;
+    width: 250px;
+    border-radius: 10px 10px 0 0;
+    position: relative;
+}
+
+.pictures img{
+    width: 200px;
+    margin: -80px  22px 30px;
+    position: absolute;
+    filter: drop-shadow(0 0 10px rgba(0,0,0,0.8));
+}
+ 
+.dusw{
+    text-align: center;
+    height: 85px;
+    width: 210%;
+    color: white;
+    background:rgba(128, 0, 50, 1);
+    padding: 20px;
+    border-radius: 0 0 10px 10px;
+    z-index: 2;
+    font-size: 1.15rem;
+    position: relative;
+    cursor: pointer;
+}
+
+.evtras{
+        display: none;
+    }
+    .ver-detalos{
+    color:#FCC61D;       /* Cambia el color del texto a blanco */
+    font-weight: bold;
+    text-decoration: none; /* Opcional: quita el subrayado */
+    }
+
+/* Detalles compactos */
+    .evtras{
+      display: none;
+      padding: 8px;
+      background:rgba(128, 0, 50, 1) ;
+      border: 1px solid rgba(128, 0, 50, 1);
+      border-radius: 6px;
+      font-size:13px;
+      color: #fff;
+    }
+
+    #camisa22-abie:target ~ .kaka .evtras {
+        display: block;
+    }
+
+    .evtras a {
+      display: block;
+      font-size: 12px;
+      color:#FCC61D;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+.keke{
+    width: 100px;
+    padding: 50px 50px;
+    transition: transform 0.3s ease; /* Esto hace la animación suave */
+}
+
+
+.keke:hover {
+    transform: translateY(-10px); /* Se desplaza 10px hacia arriba */
+}
+
+.picturesh{
+    background: url(..//images/D_NQ_NP_823197-MLB45999154124_052021-O.webp);
+    background-size: cover;
+    height: 400px;
+    width: 250px;
+    border-radius: 10px 10px 0 0;
+    position: relative;
+}
+
+.picturesh img{
+    width: 200px;
+    margin: -80px  22px 30px;
+    position: absolute;
+    filter: drop-shadow(0 0 10px rgba(0,0,0,0.8));
+}
+ 
+.dusww{
+    text-align: center;
+    height: 85px;
+    width: 210%;
+    color: white;
+    background:rgba(128, 0, 50, 1);
+    padding: 20px;
+    border-radius: 0 0 10px 10px;
+    z-index: 2;
+    font-size: 1.15rem;
+    position: relative;
+    cursor: pointer;
+}
+
+.eqtras{
+        display: none;
+    }
+    .ver-dete{
+    color:#FCC61D;       /* Cambia el color del texto a blanco */
+    font-weight: bold;
+    text-decoration: none; /* Opcional: quita el subrayado */
+    }
+
+/* Detalles compactos */
+    .eqtras{
+      display: none;
+      padding: 8px;
+      background:rgba(128, 0, 50, 1) ;
+      border: 1px solid rgba(128, 0, 50, 1);
+      border-radius: 6px;
+      font-size:13px;
+      color: #fff;
+    }
+
+    #camisa23-abie:target ~ .keke .eqtras {
+        display: block;
+    }
+
+    .eqtras a {
+      display: block;
+      font-size: 12px;
+      color:#FCC61D;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+
+.kiki{
+    width: 100px;
+    padding: 50px 50px;
+    transition: transform 0.3s ease; /* Esto hace la animación suave */
+}
+
+
+.kiki:hover {
+    transform: translateY(-10px); /* Se desplaza 10px hacia arriba */
+}
+
+.pictureshq{
+    background: url(..//images/OIP\ \(22\).webp);
+    background-size: cover;
+    height: 400px;
+    width: 250px;
+    border-radius: 10px 10px 0 0;
+    position: relative;
+}
+
+.pictureshq img{
+    width: 200px;
+    margin: -80px  22px 30px;
+    position: absolute;
+    filter: drop-shadow(0 0 10px rgba(0,0,0,0.8));
+}
+ 
+.duswwm{
+    text-align: center;
+    height: 85px;
+    width: 210%;
+    color: white;
+    background:rgba(128, 0, 50, 1);
+    padding: 20px;
+    border-radius: 0 0 10px 10px;
+    z-index: 2;
+    font-size: 1.15rem;
+    position: relative;
+    cursor: pointer;
+}
+
+.eytras{
+        display: none;
+    }
+    .ver-detel{
+    color:#FCC61D;       /* Cambia el color del texto a blanco */
+    font-weight: bold;
+    text-decoration: none; /* Opcional: quita el subrayado */
+    }
+
+/* Detalles compactos */
+    .eytras{
+      display: none;
+      padding: 8px;
+      background:rgba(128, 0, 50, 1) ;
+      border: 1px solid rgba(128, 0, 50, 1);
+      border-radius: 6px;
+      font-size:13px;
+      color: #fff;
+    }
+
+    #camisa24-abie:target ~ .kiki .eytras {
+        display: block;
+    }
+
+    .eytras a {
+      display: block;
+      font-size: 12px;
+      color:#FCC61D;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+
+.footer {
+    background: #af312aff;
+    color: #fff;
+    padding: 8px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between; /* Mueve los elementos a los extremos */
+    align-items: center; /* Centra los elementos verticalmente */
+}
+
+.info {
+    font-size:24px;
+}
+.logos img {
+    height: 250px; /* Ajusta el tamaño de tu logo si es necesario */
+    width: auto;
+}
+
+.texts {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 24px;
+}

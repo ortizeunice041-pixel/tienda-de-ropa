@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="lib/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="header__superior">
+            <div class="logo">
+                <img src="images/logo.png" alt="">
+            </div>
+        </div>
+
+        <div class="container__menu">
+
+            <div class="menu">
+                <input type="checkbox" id="check__menu">
+                <label id="label__check" for="check__menu">
+                    <i class="fa-solid fa-bars icon__menu"></i>
+                </label>
+                <nav>
+                    <ul>
+                        <li><a href="#" id="selected"></a></li>
+                        <li><a href="#">Catalogo</a>
+                            <ul>
+                                <li><a href="#">Mujer</a></li>
+                                <li><a href="#">Hombre</a></li>
+                                <li><a href="#">Niños</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Compra y venta</a></li>
+                        <li><a href="#">Promociones y novedades</a></li>
+                        <li><a href="#">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+        </div>
+
+    </header>
+    <script src="lib/fontawesome/js/all.min.js"></script>
+
+    <main>
+        <section class="carousel">
+            <img class="VideoSlide" src="images/0.jpg">
+            <div class="capa"></div>
+
+            <div class="content-slide">
+                <h2 class="content-title"></h2>
+                <p class="content-text"></p>
+                <button class="content-btn">Leer más</button>
+            </div>
+            <div class="navegation">
+                <div class="btn-nav"></div>
+                <div class="btn-nav"></div>
+                <div class="btn-nav"></div>
+                <div class="btn-nav"></div>
+                <div class="btn-nav"></div>
+            </div>
+        </section>
+        <section class="texto">
+            <h2>PRODUCTOS DESTACADOS</h2>
+        </section>
+        <div class="titulo">
+            <h4>Catálogo de hombre </h4>
+        </div>
+        <div>
+        <section class="tarjetas">
+
+            <div class="card">
+                <div class="card-img">
+                    <img src="images/abrigo de marron.webp" alt="">
+                </div>
+                <div class="card-body">
+                    <h3>Sueter de piel</h3>
+                    <p>Suéter de piel: cálido y elegante.</p>
+                </div>
+            </div>
+
+            <a id="camisa1-open" class="anchor"></a>
+            <a id="camisa1-close" class="anchor"></a>
+
+            <div class="lili">
+                <div class="imagen">
+                </div>
+                <div class="descripcion">
+                    <h3>Chaqueta negra</h3>
+                    <p>Chaqueta negra clásica y versátil.</p>
+                    <a href="#camisa1-open" class="ver-detalles">Ver detalles</a>
+
+                    <!-- Detalles compactos (debajo de la tarjeta) -->
+                    <div id="camisa1" class="extra">
+                        Chaqueta negra elegante <br>
+                        talla S, M, L y XL. <br>
+                        precio: $15.60
+                        <a href="#camisa1-close">Ocultar</a>
+                    </div>
+                </div>
+            </div>
+
+            <a id="camisa3-abier" class="anchorst"></a>
+            <a id="camisa3-cerrad" class="anchorst"></a>
+
+            <div class="lolo">
+                <div class="imagef">
+                </div>
+                <div class="description">
+                    <h3>Camisa rayada</h3>
+                    <p>Camisa rayada rosado oscuro.</p>
+                    <a href="#camisa3-abier" class="ver-detallesd">Ver detalles</a>
+
+                    <!-- Detalles compactos (debajo de la tarjeta) -->
+                    <div id="camisa3" class="extrad">
+                        Chaqueta negra elegante <br>
+                        talla S, M, L y XL. <br>
+                        precio: $13.50
+                        <a href="#camisa3-cerrad">Ocultar</a>
+                    </div>
+                </div>
+            </div>
+
+            <a id="camisa4-abiert" class="ancho"></a>
+            <a id="camisa4-cerrada" class="ancho"></a>
+
+            <div class="lulu">
+                <div class="imageo">
+                </div>
+                <div class="descriptions">
+                    <h3>Pantalón azul</h3>
+                    <p>Pantalón de vestir azul, elegante.</p>
+                    <a href="#camisa4-abiert" class="ver-detall">Ver detalles</a>
+
+                    <!-- Detalles compactos (debajo de la tarjeta) -->
+                    <div id="camisa4" class="extrac">
+                        Chaqueta negra elegante <br>
+                        talla S, M, L y XL. <br>
+                        precio: $20.00
+                        <a href="#camisa4-cerrada">Ocultar</a>
+                    </div>
+                </div>
+            </div>
+
+            <a id="camisa5-abiertd" class="anchol"></a>
+            <a id="camisa5-cerratd" class="anchol"></a>
+
+            <div class="cardu">
+                <div class="imagi">
+                </div>
+                <div class="bodyes">
+                    <h3>Camisa azul</h3>
+                    <p>Camisa de vestir azul rayada. </p>
+                    <a href="#camisa5-abiertd" class="ver-detallis">Ver detalles</a>
+
+                    <!-- Detalles compactos (debajo de la tarjeta) -->
+                    <div id="camisa5" class="extraa">
+                        Chaqueta negra elegante <br>
+                        talla S, M, L y XL. <br>
+                        precio: $20.00
+                        <a href="#camisa5-cerratd">Ocultar</a>
+                    </div>
+                </div>
+            </div>
+
+            <a id="camisa6-abie" class="anc"></a>
+            <a id="camisa6-cerr" class="anc"></a>
+
+            <div class="cardius">
+                <div class="imagis">
+                </div>
+                <div class="bod">
+                    <h3>Blusa de vestir</h3>
+                    <p>Camisa de vestir color crema.</p>
+                    <a href="#camisa6-abie" class="ver-deta">Ver detalles</a>
+
+                    <!-- Detalles compactos (debajo de la tarjeta) -->
+                    <div id="camisa6" class="extr">
+                        Chaqueta negra elegante <br>
+                        talla S, M, L y XL. <br>
+                        precio: $20.00
+                        <a href="#camisa6-cerr">Ocultar</a>
+
+                    </div>
+                </div>
+            </div>
+
+            <a id="camisa7-abie" class="anco"></a>
+            <a id="camisa7-cerr" class="anco"></a>
+
+            <div class="cards">
+                <div class="imagish">
+                </div>
+                <div class="bodl">
+                    <h3>Sueter azul</h3>
+                    <p>Suéter azul, cálido y cómodo.</p>
+                    <a href="#camisa7-abie" class="ver-detal">Ver detalles</a>
+
+                    <!-- Detalles compactos (debajo de la tarjeta) -->
+                    <div id="camisa7" class="ext">
+                        Chaqueta negra elegante <br>
+                        talla S, M, L y XL. <br>
+                        precio: $20.00
+                        <a href="#camisa7-cerr">Ocultar</a>
+                    </div>
+                </div>
+            </div>
+
+            <a id="camisa8-abie" class="ancol"></a>
+            <a id="camisa8-cerr" class="ancol"></a>
+
+            <div class="cardsd">
+                <div class="imagishes">
+                </div>
+                <div class="bodle">
+                    <h3>Short negro</h3>
+                    <p>Short negro, básico y versátil.</p>
+                    <a href="#camisa8-abie" class="ver-detalp">Ver detalles</a>
+
+                    <!-- Detalles compactos (debajo de la tarjeta) -->
+                    <div id="camisa8" class="ex">
+                        Chaqueta negra elegante <br>
+                        talla S, M, L y XL. <br>
+                        precio: $20.00
+                        <a href="#camisa8-cerr">Ocultar</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        </div>
+
+        <div class="titulex">
+            <h4>Catálogo de mujer </h4>
+        </div>
+
+        <section class="tarjetasss">
+            <a id="camisa9-abie" class="ancoll"></a>
+            <a id="camisa9-cerr" class="ancoll"></a>
+
+            <div class="jaja">
+                <div class="imageu">
+                </div>
+                <div class="descriptionsdf">
+                    <h3>Blusa de vestir</h3>
+                    <p>Blusa de vestir azul con rayas.</p>
+                    <a href="#camisa9-abie" class="ver-detalpñ">Ver detalles</a>
+
+                    <!-- Detalles compactos (debajo de la tarjeta) -->
+                    <div id="camisa9" class="e">
+                        Chaqueta negra elegante <br>
+                        talla S, M, L y XL. <br>
+                        precio: $20.00
+                        <a href="#camisa9-cerr">Ocultar</a>
+
+                    </div>
+                </div>
+            </div>
+
+            <a id="camisa10-abie" class="ancolls"></a>
+            <a id="camisa10-cerr" class="ancolls"></a>
+
+            <div class="jeje">
+                <div class="imageus">
+                </div>
+                <div class="descriptionsdfi">
+                    <h3>Camisa negra</h3>
+                    <p>Camisa negra con mangas de encaje.</p>
+                    <a href="#camisa10-abie" class="ver-detalpñs">Ver detalles</a>
+
+                    <!-- Detalles compactos (debajo de la tarjeta) -->
+                    <div id="camisa10" class="estras">
+                        Chaqueta negra elegante <br>
+                        talla S, M, L y XL. <br>
+                        precio: $20.00
+                        <a href="#camisa10-cerr">Ocultar</a>
+                    </div>
+                </div>
+            </div>
+
+            <a id="camisa11-abie" class="an"></a>
+            <a id="camisa11-cerr" class="an"></a>
+
+            <div class="hshs">
+                <div class="imageusq">
+                </div>
+                <div class="descro">
+                    <h3>Corset marrón</h3>
+                    <p>Corset marrón, elegante y ajustado.</p>
+                    <a href="#camisa11-abie" class="ver-de">Ver detalles</a>
+
+                    <!-- Detalles compactos (debajo de la tarjeta) -->
+                    <div id="camisa11" class="estrass">
+                        Chaqueta negra elegante <br>
+                        talla S, M, L y XL. <br>
+                        precio: $20.00
+                        <a href="#camisa11-cerr">Ocultar</a>
+
+                    </div>
+                </div>
+            </div>
+
+            <a id="camisa12-abie" class="tall"></a>
+            <a id="camisa12-cerr" class="tall"></a>
+
+            <div class="haha">
+                <div class="imageusque">
+                </div>
+                <div class="descrop">
+                    <h3>Short beige</h3>
+                    <p>Short beige, cómodo y versátil.</p>
+                    <a href="#camisa12-abie" class="ver-d">Ver detalles</a>
+
+                    <!-- Detalles compactos (debajo de la tarjeta) -->
+                    <div id="camisa12" class="estrasss">
+                        Chaqueta negra elegante <br>
+                        talla S, M, L y XL. <br>
+                        precio: $20.00
+                        <a href="#camisa12-cerr">Ocultar</a>
+
+                    </div>
+                </div>
+            </div>
+
+            <a id="camisa13-abie" class="tell"></a>
+            <a id="camisa13-cerr" class="tell"></a>
+
+            <div class="hehe">
+                <div class="photo">
+                </div>
+                <div class="discrop">
+                    <h3>Pantalón de vestir</h3>
+                    <p>Pantalón gris de vestir, elegante.</p>
+                    <a href="#camisa13-abie" class="ver-di">Ver detalles</a>
+
+                    <!-- Detalles compactos (debajo de la tarjeta) -->
+                    <div id="camisa13" class="estra">
+                        Chaqueta negra elegante <br>
+                        talla S, M, L y XL. <br>
+                        precio: $20.00
+                        <a href="#camisa13-cerr">Ocultar</a>
+
+                    </div>
+                </div>
+            </div>
+
+            <a id="camisa14-abie" class="till"></a>
+            <a id="camisa14-cerr" class="till"></a>
+
+            <div class="hihi">
+                <div class="photos">
+                </div>
+                <div class="discrope">
+                    <h3>Falda rayada </h3>
+                    <p>Falda rayada, moderna y versátil.</p>
+                    <a href="#camisa14-abie" class="ver-dis">Ver detalles</a>
+
+                    <!-- Detalles compactos (debajo de la tarjeta) -->
+                    <div id="camisa14" class="es">
+                        Chaqueta negra elegante <br>
+                        talla S, M, L y XL. <br>
+                        precio: $20.00
+                        <a href="#camisa14-cerr">Ocultar</a>
+                    </div>
+                </div>
+            </div>
+
+            <a id="camisa15-abie" class="toll"></a>
+            <a id="camisa15-cerr" class="toll"></a>
+
+            <div class="hoho">
+                <div class="photose">
+                </div>
+                <div class="discropel">
+                    <h3>Vestido</h3>
+                    <p>Vestido color vino, elegante.</p>
+                    <a href="#camisa15-abie" class="ver-disp">Ver detalles</a>
+
+                    <!-- Detalles compactos (debajo de la tarjeta) -->
+                    <div id="camisa15" class="edtras">
+                        Chaqueta negra elegante <br>
+                        talla S, M, L y XL. <br>
+                        precio: $20.00
+                        <a href="#camisa15-cerr">Ocultar</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <a id="camisa16-abie" class="twll"></a>
+            <a id="camisa16-cerr" class="twll"></a>
+
+            <div class="huhu">
+                <div class="foto">
+                </div>
+                <div class="dascrip">
+                    <h3>Camisa negra</h3>
+                    <p>Camisa negra corta, moderna.</p>
+                    <a href="#camisa16-abie" class="ver-dispon">Ver detalles</a>
+
+                    <!-- Detalles compactos (debajo de la tarjeta) -->
+                    <div id="camisa16" class="eftras">
+                        Chaqueta negra elegante <br>
+                        talla S, M, L y XL. <br>
+                        precio: $20.00
+                        <a href="#camisa16-cerr">Ocultar</a>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="titux">
+            <h4>Catálogo de niños</h4>
+        </div>
+        <section class="tarjetus">
+
+            <a id="camisa17-abie" class="tpll"></a>
+            <a id="camisa17-cerr" class="tpll"></a>
+
+            <div class="gaga">
+                <div class="fotos">
+                </div>
+                <div class="dascript">
+                    <h3>Vestido floreado</h3>
+                    <p>Vestido floreado de niña, colorido.</p>
+                    <a href="#camisa17-abie" class="ver-dñ">Ver detalles</a>
+
+                    <!-- Detalles compactos (debajo de la tarjeta) -->
+                    <div id="camisa17" class="ettras">
+                        Chaqueta negra elegante <br>
+                        talla S, M, L y XL. <br>
+                        precio: $20.00
+                        <a href="#camisa17-cerr">Ocultar</a>
+                    </div>
+                </div>
+            </div>
+
+            <a id="camisa18-abie" class="tkll"></a>
+            <a id="camisa18-cerr" class="tkll"></a>
+
+            <div class="gege">
+                <div class="fotosga">
+                </div>
+                <div class="dascripts">
+                    <h3>Camisa rosada</h3>
+                    <p>Blusa rosada, fresca y femenina.</p>
+                    <a href="#camisa18-abie" class="ver-dño">Ver detalles</a>
+
+                    <!-- Detalles compactos (debajo de la tarjeta) -->
+                    <div id="camisa18" class="eltras">
+                        Chaqueta negra elegante <br>
+                        talla S, M, L y XL. <br>
+                        precio: $20.00
+                        <a href="#camisa18-cerr">Ocultar</a>
+                    </div>
+                </div>
+            </div>
+
+            <a id="camisa19-abie" class="tnll"></a>
+            <a id="camisa19-cerr" class="tnll"></a>
+            <div class="gigi">
+                <div class="fotosg">
+                </div>
+                <div class="dis">
+                    <h3>Short</h3>
+                    <p>Short celeste con encaje de niña, delicado</p>
+                    <a href="#camisa19-abie" class="ver-dños">Ver detalles</a>
+
+                    <!-- Detalles compactos (debajo de la tarjeta) -->
+                    <div id="camisa18" class="entras">
+                        Chaqueta negra elegante <br>
+                        talla S, M, L y XL. <br>
+                        precio: $20.00
+                        <a href="#camisa19-cerr">Ocultar</a>
+                    </div>
+                </div>
+            </div>
+
+            <a id="camisa20-abie" class="tnkll"></a>
+            <a id="camisa20-cerr" class="tnkll"></a>
+
+            <div class="gogo">
+                <div class="fhotos">
+                </div>
+                <div class="dos">
+                    <h3>Pantalón</h3>
+                    <p>Pantalón color vino de niña, cómodo</p>
+                    <a href="#camisa20-abie" class="ver-dlp">Ver detalles</a>
+
+                    <!-- Detalles compactos (debajo de la tarjeta) -->
+                    <div id="camisa20" class="emtras">
+                        Chaqueta negra elegante <br>
+                        talla S, M, L y XL. <br>
+                        precio: $20.00
+                        <a href="#camisa20-cerr">Ocultar</a>
+                    </div>
+                </div>
+            </div>
+
+            <a id="camisa21-abie" class="tnklla"></a>
+            <a id="camisa21-cerr" class="tnklla"></a>
+
+            <div class="gugu">
+                <div class="picture">
+                </div>
+                <div class="dus">
+                    <h3>Camisa de vestir</h3>
+                    <p>Camisa azul de vestir elegante.</p>
+                    <a href="#camisa21-abie" class="ver-detalo">Ver detalles</a>
+
+                    <!-- Detalles compactos (debajo de la tarjeta) -->
+                    <div id="camisa21" class="ebtras">
+                        Chaqueta negra elegante <br>
+                        talla S, M, L y XL. <br>
+                        precio: $20.00
+                        <a href="#camisa21-cerr">Ocultar</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <a id="camisa22-abie" class="evtras"></a>
+            <a id="camisa22-cerr" class="evtras"></a>
+
+            <div class="kaka">
+                <div class="pictures">
+                </div>
+                <div class="dusw">
+                    <h3>Pantalón</h3>
+                    <p>Pantalón azul, versátil y cómodo.</p>
+                    <a href="#camisa22-abie" class="ver-detalos">Ver detalles</a>
+
+                    <!-- Detalles compactos (debajo de la tarjeta) -->
+                    <div id="camisa22" class="evtras">
+                        Chaqueta negra elegante <br>
+                        talla S, M, L y XL. <br>
+                        precio: $20.00
+                        <a href="#camisa22-cerr">Ocultar</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <a id="camisa23-abie" class="eqtras"></a>
+            <a id="camisa23-cerr" class="eqtras"></a>
+
+            <div class="keke">
+                <div class="picturesh">
+                </div>
+                <div class="dusww">
+                    <h3>Pijama</h3>
+                    <p>Pijama de Mickey Mouse, divertido y cómodo.</p>
+                    <a href="#camisa23-abie" class="ver-dete">Ver detalles</a>
+
+                    <!-- Detalles compactos (debajo de la tarjeta) -->
+                    <div id="camisa23" class="eqtras">
+                        Chaqueta negra elegante <br>
+                        talla S, M, L y XL. <br>
+                        precio: $20.00
+                        <a href="#camisa23-cerr">Ocultar</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <a id="camisa24-abie" class="eytras"></a>
+            <a id="camisa24-cerr" class="eytras"></a>
+
+            <div class="kiki">
+                <div class="pictureshq">
+                </div>
+                <div class="duswwm">
+                    <h3>Short</h3>
+                    <p>Short verde oscuro, casual y versátil.</p>
+                    <a href="#camisa24-abie" class="ver-detel">Ver detalles</a>
+
+                    <!-- Detalles compactos (debajo de la tarjeta) -->
+                    <div id="camisa24" class="eytras">
+                        Chaqueta negra elegante <br>
+                        talla S, M, L y XL. <br>
+                        precio: $20.00
+                        <a href="#camisa24-cerr">Ocultar</a>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="info">
+                    <br>WhatsApp: +50370515234</br>
+                    <br>Email: clothesshop@gmail.com</br>
+                    <br>Dirección: 33° AVENIDA NORTE, METROCENTRO 8va ETAPA LOCAL #293,</br>
+                    <p>SAN SALVADOR</p>
+                </div>
+                <div class="logos">
+                    <img src="images/logo del sitio.svg">
+                </div>
+            </div>
+
+            <div class="texts">
+                <p>Al comprar en nuestra tienda estás de acuerdo con nuestros Términos y Condiciones</p>
+            </div>
+        </footer>
+        </footer>
+
+        <script src="js/index.js"></script>
+</body>
+
+</html>
